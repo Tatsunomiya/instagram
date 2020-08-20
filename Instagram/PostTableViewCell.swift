@@ -8,12 +8,49 @@
 
 import UIKit
 import FirebaseUI
+import Firebase
+import SVProgressHUD
+
 
 class PostTableViewCell: UITableViewCell {
+    
+    
+
+    
+    
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var commentField: UITextField!
+    
+    @IBAction func commentPostButton(_ sender: Any) {
+        
+        
+        let postRef = Firestore.firestore().collection(Const.PostPath).document()
+
+        
+        
+        let name = Auth.auth().currentUser?.displayName
+        let postDic = [
+            "name": name!,
+            "comment": self.commentField.text!,
+            ] as [String : Any]
+        postRef.setData(postDic)
+        // HUDで投稿完了を表示する
+        SVProgressHUD.showSuccess(withStatus: "投稿しました")
+        
+        
+        
+        
+        
+
+        
+        
+    }
+    
+
     
     @IBOutlet weak var captionLabel: UILabel!
     
@@ -29,6 +66,18 @@ class PostTableViewCell: UITableViewCell {
     }
     
     
+    func setPostData2(_ postData: PostData) {
+        
+        self.commentLabel.text = "\(postData.name!) : \(postData.comment!) "
+        
+        
+        
+
+
+        
+    }
+    
+    
     func setPostData(_ postData: PostData) {
         postImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         let imageRef = Storage.storage().reference().child(Const.ImagePath).child(postData.id + ".jpg")
@@ -36,9 +85,22 @@ class PostTableViewCell: UITableViewCell {
         
         
         
+        
+        
+
+        
+        
+        
         self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
         
         self.dateLabel.text = ""
+        
+
+        
+
+        
+
+        
         
         if let date = postData.date{
             let formatter = DateFormatter()
