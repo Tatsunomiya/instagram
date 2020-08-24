@@ -22,8 +22,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var commentLabel: UILabel!
-    @IBOutlet weak var commentField: UITextField!
+    @IBOutlet weak var captionLabel: UILabel!
     
     @IBAction func commentPostButton(_ sender: Any) {
         
@@ -35,7 +34,7 @@ class PostTableViewCell: UITableViewCell {
         let name = Auth.auth().currentUser?.displayName
         let postDic = [
             "name": name!,
-            "comment": self.commentField.text!,
+//            "comment": self.commentField.text!,
             ] as [String : Any]
         postRef.setData(postDic)
         // HUDで投稿完了を表示する
@@ -52,7 +51,6 @@ class PostTableViewCell: UITableViewCell {
     
 
     
-    @IBOutlet weak var captionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -68,7 +66,7 @@ class PostTableViewCell: UITableViewCell {
     
     func setPostData2(_ postData: PostData) {
         
-        self.commentLabel.text = "\(postData.name!) : \(postData.comment!) "
+//        self.commentLabel.text = "\(postData.name!) : \(postData.comment!) "
         
         
         
