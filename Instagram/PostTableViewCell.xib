@@ -40,7 +40,7 @@
                         <state key="normal" title="Button" image="like_none"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fX-Hr-sfp">
-                        <rect key="frame" x="130" y="405.5" width="245" height="21"/>
+                        <rect key="frame" x="333" y="405.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -58,12 +58,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ypy-iE-fO2">
-                        <rect key="frame" x="130" y="399" width="32" height="34"/>
+                        <rect key="frame" x="130" y="399" width="143" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WP-RT-Iar">
-                        <rect key="frame" x="172" y="396" width="40" height="40"/>
+                        <rect key="frame" x="283" y="396" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="1RH-1g-ceT"/>
                             <constraint firstAttribute="width" constant="40" id="GXX-2D-HEo"/>
@@ -75,6 +75,7 @@
                     <constraint firstItem="h9p-8a-GQw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="3P7-8i-YHm"/>
                     <constraint firstItem="2fX-Hr-sfp" firstAttribute="centerY" secondItem="sdt-NA-oYx" secondAttribute="centerY" id="666-aa-6Ue"/>
                     <constraint firstItem="0WP-RT-Iar" firstAttribute="leading" secondItem="Ypy-iE-fO2" secondAttribute="trailing" constant="10" id="7JR-hg-VmH"/>
+                    <constraint firstItem="2fX-Hr-sfp" firstAttribute="leading" secondItem="0WP-RT-Iar" secondAttribute="trailing" constant="10" id="8aj-MZ-Zwr"/>
                     <constraint firstItem="sdt-NA-oYx" firstAttribute="top" secondItem="Ko3-8V-zvN" secondAttribute="bottom" constant="10" id="9ux-Eu-jU0"/>
                     <constraint firstItem="h9p-8a-GQw" firstAttribute="top" secondItem="sdt-NA-oYx" secondAttribute="bottom" constant="10" id="Aah-6P-obW"/>
                     <constraint firstItem="Ypy-iE-fO2" firstAttribute="leading" secondItem="ZJm-Ew-684" secondAttribute="trailing" constant="10" id="Fno-eU-ySm"/>
@@ -82,7 +83,6 @@
                     <constraint firstItem="Pkb-uL-NaR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="K0y-aM-NiJ"/>
                     <constraint firstItem="ZJm-Ew-684" firstAttribute="leading" secondItem="sdt-NA-oYx" secondAttribute="trailing" constant="10" id="N17-FM-3S6"/>
                     <constraint firstAttribute="trailingMargin" secondItem="h9p-8a-GQw" secondAttribute="trailing" constant="10" id="Wqd-Ka-Z4H"/>
-                    <constraint firstItem="2fX-Hr-sfp" firstAttribute="leading" secondItem="ZJm-Ew-684" secondAttribute="trailing" constant="10" id="WuQ-wX-MTN"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Pkb-uL-NaR" secondAttribute="bottom" constant="10" id="aHs-fM-fQo"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Pkb-uL-NaR" secondAttribute="trailing" constant="10" id="aV1-My-ynz"/>
                     <constraint firstItem="sdt-NA-oYx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="cEs-Cs-18R"/>
